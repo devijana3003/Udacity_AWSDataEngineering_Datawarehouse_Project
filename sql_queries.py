@@ -114,7 +114,7 @@ weekday INT
 staging_events_copy = ("""
 COPY staging_events
 FROM 's3://udacity-dend/log_data'
-IAM_ROLE 'arn:aws:iam::673065592668:role/myRedshiftRole'
+IAM_ROLE ''
 REGION 'us-west-2'
 FORMAT AS JSON 'auto'
 ;
@@ -123,7 +123,7 @@ FORMAT AS JSON 'auto'
 staging_songs_copy = ("""
 COPY staging_songs
 FROM 's3://udacity-dend/song_data'
-IAM_ROLE 'arn:aws:iam::673065592668:role/myRedshiftRole'
+IAM_ROLE ''
 REGION 'us-west-2'
 FORMAT AS JSON 'auto'
 ;
